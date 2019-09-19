@@ -194,6 +194,7 @@ fun pipeline1(execCtx: *ExecutionContext, state: *State) -> nil {
   }
   // Step 3: Build HT1
   @joinHTBuild(&state.join_table1)
+  @tableIterClose(&r_tvi)
 }
 
 // Scan Nation table, probe HT1, build HT2
@@ -339,8 +340,6 @@ fun pipeline6(execCtx: *ExecutionContext, state: *State) -> nil {
       }
     }
   }
-  @outputFinalize(execCtx)
-
   @tableIterClose(&l_tvi)
 }
 

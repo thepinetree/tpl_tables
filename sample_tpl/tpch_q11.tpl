@@ -200,6 +200,7 @@ fun pipeline3_2(execCtx: *ExecutionContext, state: *State) -> nil {
       }
     }
   }
+  @tableIterClose(&ps_tvi)
 }
 
 // BNL, sort

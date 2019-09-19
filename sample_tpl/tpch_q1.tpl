@@ -17,7 +17,7 @@ struct Output {
 struct State {
   agg_hash_table: AggregationHashTable
   sorter: Sorter
-  count : int64 // debug
+  count : int32 // debug
 }
 
 struct AggValues {
@@ -104,7 +104,9 @@ fun pipeline1(execCtx: *ExecutionContext, state: *State) -> nil {
   for (@tableIterAdvance(&l_tvi)) {
     var vec = @tableIterGetVPI(&l_tvi)
     for (; @vpiHasNext(vec); @vpiAdvance(vec)) {
-      if (@vpiGetDate(vec, 10) < @dateToSql(1998, 12, 1)) { //
+      if (@vpiGetDate(vec, 10) < @dateToSql(1998, 12, 1)) { // l_shipdate
+        state.count = state.count + 1
+
         var agg_values : AggValues
         agg_values.l_returnflag = @vpiGetVarlen(vec, 8) // l_returnflag
         agg_values.l_linestatus = @vpiGetVarlen(vec, 9) // l_linestatus
@@ -143,6 +145,7 @@ fun pipeline1(execCtx: *ExecutionContext, state: *State) -> nil {
       }
     }
   }
+  @tableIterClose(&l_tvi)
 }
 
 fun pipeline2(execCtx: *ExecutionContext, state: *State) -> nil {

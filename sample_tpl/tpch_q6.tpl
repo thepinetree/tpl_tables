@@ -50,6 +50,7 @@ fun execQuery(execCtx: *ExecutionContext, state: *State) -> nil {
   out = @ptrCast(*outputStruct, @outputAlloc(execCtx))
   out.out = @aggResult(&state.sum)
   @outputFinalize(execCtx)
+  @tableIterClose(&tvi)
 }
 
 fun main(execCtx: *ExecutionContext) -> int32 {

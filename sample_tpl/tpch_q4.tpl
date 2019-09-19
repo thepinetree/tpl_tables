@@ -168,8 +168,8 @@ fun pipeline4(execCtx: *ExecutionContext, state: *State) -> nil {
 fun execQuery(execCtx: *ExecutionContext, state: *State) -> nil {
   pipeline1(execCtx, state)
   pipeline2(execCtx, state)
-  pipeline3(execCtx, state)
-  pipeline4(execCtx, state)
+  //pipeline3(execCtx, state)
+  //pipeline4(execCtx, state)
   @outputFinalize(execCtx)
 }
 
