@@ -16,16 +16,16 @@ sed -i 's/[|]$//' lineitem.tbl
 sed -i 's/[|]$//' nation.tbl
 sed -i 's/[|]$//' region.tbl
 
-python gen_tpch.py part
-python gen_tpch.py supplier
-python gen_tpch.py partsupp
-python gen_tpch.py customer
-python gen_tpch.py orders
-python gen_tpch.py lineitem
-python gen_tpch.py nation
-python gen_tpch.py region
+#python gen_tpch.py part
+#python gen_tpch.py supplier
+#python gen_tpch.py partsupp
+#python gen_tpch.py customer
+#python gen_tpch.py orders
+#python gen_tpch.py lineitem
+#python gen_tpch.py nation
+#python gen_tpch.py region
 
-rm *.tbl
+#rm *.tbl
 
 # Rename to .data
 #mv part.tbl part.data
