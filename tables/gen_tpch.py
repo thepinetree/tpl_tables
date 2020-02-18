@@ -7,7 +7,7 @@ def gen_csv(table_name):
     tbl_file = table_name + ".tbl"
     data_file = table_name + ".data"
     df = pd.read_csv(tbl_file, sep='|', header=None, index_col=False)
-    df.to_csv(data_file, index=False)
+    df.to_csv(data_file, sep='|', index=False)
     print("Cleaned up csv file")
 
 def run(argv):

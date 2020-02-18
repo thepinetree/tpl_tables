@@ -15,26 +15,28 @@ sed -i 's/[|]$//' orders.tbl
 sed -i 's/[|]$//' lineitem.tbl
 sed -i 's/[|]$//' nation.tbl
 sed -i 's/[|]$//' region.tbl
+echo "Done format"
 
-#python gen_tpch.py part
-#python gen_tpch.py supplier
-#python gen_tpch.py partsupp
-#python gen_tpch.py customer
-#python gen_tpch.py orders
-#python gen_tpch.py lineitem
-#python gen_tpch.py nation
-#python gen_tpch.py region
+echo "Writing first row"
+python gen_tpch.py part
+python gen_tpch.py supplier
+python gen_tpch.py partsupp
+python gen_tpch.py customer
+python gen_tpch.py orders
+python gen_tpch.py lineitem
+python gen_tpch.py nation
+python gen_tpch.py region
 
 #rm *.tbl
 
 # Rename to .data
-#mv part.tbl part.data
-#mv supplier.tbl supplier.data
-#mv customer.tbl customer.data
-#mv partsupp.tbl partsupp.data
-#mv orders.tbl orders.data
-#mv lineitem.tbl lineitem.data
-#mv nation.tbl nation.data
-#mv region.tbl region.data
+mv part.data part.tbl
+mv supplier.data supplier.tbl
+mv customer.data customer.tbl
+mv partsupp.data partsupp.tbl
+mv orders.data orders.tbl
+mv lineitem.data lineitem.tbl
+mv nation.data nation.tbl
+mv region.data region.tbl
 
 echo "Formatted"
