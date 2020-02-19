@@ -1,9 +1,14 @@
 # Create tables
-cd tpch-dbgen
+rm ./skewed_tables/*.tbl
+cd SkewedDataGenerator
 make
 ./dbgen -f -s $1
-mv *.tbl ../tables
-cd ../tables
+mv *.tbl ../skewed_tables
+cd ../skewed_tables
+
+# Rename
+echo "Renaming..."
+mv order.tbl orders.tbl
 
 echo "Formatting..."
 # Remove last | in each line
