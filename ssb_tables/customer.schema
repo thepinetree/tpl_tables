@@ -1,0 +1,12 @@
+ssbm.customer 8
+c_custkey int 0
+c_name varchar 0 25
+c_address varchar 0 25
+c_city varchar 0 10
+c_nation varchar 0 15
+c_region varchar 0 12
+c_phone varchar 0 15
+c_mktsegment varchar 0 10
+0
+customer_index 1
+0

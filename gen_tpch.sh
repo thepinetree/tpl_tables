@@ -1,9 +1,10 @@
 # Create tables
 cd tpch-dbgen
+make clean
 make
 ./dbgen -f -s $1
-mv *.tbl ../tables
-cd ../tables
+mv *.tbl ../tpch_tables
+cd ../tpch_tables
 
 echo "Formatting..."
 # Remove last | in each line
@@ -16,25 +17,15 @@ sed -i 's/[|]$//' lineitem.tbl
 sed -i 's/[|]$//' nation.tbl
 sed -i 's/[|]$//' region.tbl
 
-python gen_tpch.py part
-python gen_tpch.py supplier
-python gen_tpch.py partsupp
-python gen_tpch.py customer
-python gen_tpch.py orders
-python gen_tpch.py lineitem
-python gen_tpch.py nation
-python gen_tpch.py region
+python gen_tbl.py part
+python gen_tbl.py supplier
+python gen_tbl.py partsupp
+python gen_tbl.py customer
+python gen_tbl.py orders
+python gen_tbl.py lineitem
+python gen_tbl.py nation
+python gen_tbl.py region
 
 rm *.tbl
-
-# Rename to .data
-#mv part.tbl part.data
-#mv supplier.tbl supplier.data
-#mv customer.tbl customer.data
-#mv partsupp.tbl partsupp.data
-#mv orders.tbl orders.data
-#mv lineitem.tbl lineitem.data
-#mv nation.tbl nation.data
-#mv region.tbl region.data
 
 echo "Formatted"

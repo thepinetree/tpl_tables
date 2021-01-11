@@ -1,0 +1,21 @@
+ssbm.date 17
+d_datekey int 0
+d_date varchar 0 19
+d_dayofweek varchar 0 10
+d_month varchar 0 10
+d_year int 0
+d_yearmonthnum int 0
+d_yearmonth varchar 0 8
+d_daynuminweek int 0
+d_daynuminmonth int 0
+d_daynuminyear int 0
+d_monthnuminyear int 0
+d_weeknuminyear int 0
+d_sellingseason varchar 0 13
+d_lasdayinweekfl varchar 0 1
+d_lastdayinmonthfl varchar 0 1
+d_holidyfl varchar 0 1
+d_weekdayfl varchar 0 1
+0
+date_index 1
+0

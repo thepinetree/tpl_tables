@@ -1,0 +1,13 @@
+ssbm.part 9
+p_partkey int 0
+p_name varchar 0 22
+p_mfgr varchar 0 6
+p_category varchar 0 7
+p_brand1 varchar 0 9
+p_color varchar 0 11
+p_type varchar 0 25
+p_size int 0
+p_container varchar 0 10
+0
+part_index 1
+0

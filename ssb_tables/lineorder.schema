@@ -1,0 +1,21 @@
+ssbm.lineorder 17
+lo_orderkey int 0
+lo_linenumber int 0
+lo_custkey int 0
+lo_partkey int 0
+lo_suppkey int 0
+lo_orderdate int 0
+lo_orderpriority varchar 0 15
+lo_shippriority varchar 0 1
+lo_quantity int 0
+lo_extendedprice int 0
+lo_ordertotalprice int 0
+lo_discount int 0
+lo_revenue int 0
+lo_supplycost int 0
+lo_tax int 0
+lo_commitdate int 0
+lo_shipmode varchar 0 10
+0
+lineorder_index 1
+0
