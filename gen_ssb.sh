@@ -16,7 +16,8 @@ sed -i 's/[|]$//' supplier.tbl
 
 python gen_tbl.py customer
 python gen_tbl.py date
-python gen_tbl.py lineorder
+sed -i 's/|/,/g' lineorder.tbl
+sed -i '1s/^/0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16\n/' lineorder.tbl
 python gen_tbl.py part
 python gen_tbl.py supplier
 
