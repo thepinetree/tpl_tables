@@ -1,4 +1,19 @@
-Note: In our research paper we use the SSB instead of SSBM
+Star Schema Benchmark data generator
+==
+
+This branch has been updated to fix building of the utility on Linux.
+
+Original problems with the utility remain, such as crashes.  
+Generate each table individually:
+* ./dbgen -s 10 -T s 
+* ./dbgen -s 10 -T d
+* ./dbgen -s 10 -T p 
+* ./dbgen -s 10 -T c
+* ./dbgen -s 10 -T l
+
+Original Readme
+--
+Note: In ~~our research paper we~~~ the original paper the authors use the SSB instead of SSBM
 Version of 2/28/10: 
 Cardinality of supplier fixed to follow benchmark spec: now 2000*SF
  (previously was 10000*SF, in error): line 226, driver.c
